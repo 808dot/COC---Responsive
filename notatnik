@@ -1,0 +1,125 @@
+@media (max-width: 1535px) {
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+    .icons{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .scroll-down{
+        right: 3%;
+        transition: .2s;
+    }
+    
+}
+
+
+@media (max-width: 1390px) {
+    .hero{
+        padding: 0 12%;
+        transition: .2s;
+    }
+    
+}
+
+@media (max-width: 1290px) {
+    .hero-img img{
+        width: 500px;
+        height: auto;
+        transition: .2s;
+    }
+    .hero-text h1{
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+
+    .hero-text h5{
+        margin-bottom: 25px;
+    }
+    .hero-text a{
+        padding: 8px 20px;
+        font-size: 14px;   
+    }
+}
+
+
+@media (max-width: 1140px){
+    .hero-img img{
+        width: 400px;
+        height: auto;
+        transition: .2s;
+    }
+    .hero-text h1{
+        font-size: 55px;
+        margin: 0 0 30px;
+    }
+
+    .hero-text h5{
+        margin-bottom: 15px;
+    }
+    .hero-text a{
+        padding: 3px 16px;
+        font-size: 14px;   
+    }
+
+    .header .navlist a{
+        margin-left: 30px;
+    }
+}
+
+
+@media (max-width: 1020px) {
+    .hero{
+        
+        padding: 0 1%;
+        padding-top: 200px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .hero-img img{
+        width: 700px;
+        height: auto;
+        transition: .2s;
+    }
+    .hero-text h1{
+        font-size: 135px;
+        margin: 0 0 30px;
+    }
+
+    .hero-text h5{
+        margin-bottom: 35px;
+    }
+    .hero-text a{
+        padding: 3px 16px;
+        font-size: 14px;   
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .hero{
+        padding-top: 400px;
+    }
+    .hero-img img{
+        width: 50px;
+        /* height: auto; */
+        /* transition: .2s; */
+    }
+
+    
+}
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Source Code Pro', monospace; */

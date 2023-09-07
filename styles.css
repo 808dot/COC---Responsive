@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Source Code Pro', monospace; */
+
+@font-face {
+    font-family: Pernament Marker;
+    src: url(PermanentMarker-Regular.ttf);
+  }
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 33px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #133917;
+    
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    transition: .5s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    
+}
+
+.header .navlist{
+    display: flex;
+}
+
+.header .navlist a{
+    display: inline-block;
+    color: white;
+    margin-left: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.header .navlist a:hover{
+    border-bottom: 2px solid white;
+}
+
+.button-menu{
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    display: none;
+}
+
+.hero{
+    /* position: fixed; */
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(360deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+    display: flex;
+    padding: 0px 14%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero-text h1{
+    font-size: 90px;
+    line-height: 1;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 20px;
+    font-family: Pernament Marker;
+}
+
+.hero-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom:20px;
+}
+.hero-text p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.hero-text a{
+    display: inline-block;
+    color: white;
+    background: #4d9559;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    /* line-height: 1.4; */
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.hero-text a:hover{
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.hero-text a.ctaa{
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.ctaa i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.hero-img img{
+    width: 500px; /* or any custom size */
+    height: auto; 
+    
+}
+
+.button-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons-header{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    /* transform: translateY(-50%); */
+}
+
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: white;
+    transition: .5s;
+}
+
+.icons i:hover{
+    color: #4d9559;
+    transform: translateY(-5px);
+}
+
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+}
+
+.scroll-down i{
+    display: none;
+    /* display: block; */
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: #4d9559;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.scroll-down i:hover{
+    transform: translateY(-8px);
+}
+
+
+@media (max-width: 1200px) {
+
+    .header .navlist a{
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header .logo{
+        font-size: 35px;
+    }
+
+    .header .navlist a{
+        font-size: 18px;
+    }
+
+    .hero-img img{
+        width: 400px; 
+        height: auto;    
+    }
+
+    .hero-text h5{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text h1{
+        font-size: 70px;
+        margin-bottom: 20px;
+        font-family: Pernament Marker;
+    }
+    
+    .hero-text h4{
+        font-size: 15px;
+        margin-bottom:20px;
+    }
+    .hero-text p{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text a{
+        padding: 5px 20px;
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .header .navlist a{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header .button-menu{
+        opacity: 0;
+        animation: slideTop 1s ease forwards;
+        animation-delay: calc(.2s * 4);
+        display: block;
+    }
+
+    .icons{
+        display: none;
+    }
+
+    .icons-header{
+        display: flex;
+        /* position: absolute; */
+        /* top: 50%; */
+        /* padding: 0 9%; */
+        /* transform: translateY(-50%); */
+    }
+    
+    .icons-header i{
+        /* display: block; */
+        margin: 0px 26px;
+        font-size: 24px;
+        /* color: white; */
+        transition: .5s;
+        opacity: 0;
+        animation: slideTop 1s ease forwards;
+        animation-delay: calc(.2s * var(--i));
+    }
+    
+    .icons-header i:hover{
+        color: #4d9559;
+        transform: translateY(-5px);
+    }
+
+    .header .navlist {
+        position: absolute;
+        top:65%;
+        right: -100%;
+        width: 120px;
+        height: 200px;
+        background-color: #4d9559;
+        border-radius: 30px;
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 0px;
+        transition: .5s;
+    }
+
+    .header .navlist.open{
+        right: 3%;
+    }
+ 
+    .hero{     
+        padding: 120px 0% 0;
+        height: 800px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .header .logo{
+        font-size: 35px;
+    }
+
+
+    .hero-img img{
+        width: 400px; 
+        height: auto;    
+    }
+
+    .hero-text h5{
+        display: none;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text h1{
+        text-align: center;
+        font-size: 100px;
+        margin-bottom: 20px;
+        font-family: Pernament Marker;
+    }
+    
+    .hero-text h4{
+        font-size: 15px;
+        margin-bottom:20px;
+    }
+    .hero-text p{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+
+    /* .button-box{
+        display: flex;
+        justify-content: space-around;
+    } */
+
+}
+
+@media (max-width: 600px) {
+    .header .logo{
+        font-size: 25px;
+    }
+
+
+
+}
+
+@media (max-width: 480px) {
+
+    .hero{     
+        padding: 100px 0% 0;
+        height: 600px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .header .logo{
+        font-size: 35px;
+    }
+
+    .hero-img img{
+        width: 300px; 
+        height: auto;    
+    }
+
+    .hero-text h5{
+        display: none;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text h1{
+        text-align: center;
+        font-size: 85px;
+        margin-bottom: 20px;
+        font-family: Pernament Marker;
+    }
+    
+    .hero-text h4{
+        font-size: 15px;
+        margin-bottom:20px;
+    }
+    .hero-text p{
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
+    
+
+    
+
+}
+
+@media (max-width: 320px) {
+
+    .hero{     
+        padding: 100px 0% 0;
+        height: 50px;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .header .logo{
+        font-size: 25px;
+    }
+
+    .hero-img img{
+        padding: 20px 0;
+        width: 300px; 
+        height: auto;    
+    }
+
+    .hero-text h5{
+        display: none;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text h1{
+        text-align: center;
+        font-size: 60px;
+        margin-bottom: 20px;
+        font-family: Pernament Marker;
+    }
+    
+    .hero-text h4{
+        font-size: 10px;
+        margin-bottom:20px;
+    }
+    .hero-text p{
+        font-size: 9px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text a{
+        padding: 5px 20px;
+        font-size: 14px;
+    }
+
+}
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(-100px) ;
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0) ;
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px) ;
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0) ;
+        opacity: 1;
+    }
+}
